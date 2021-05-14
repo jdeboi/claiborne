@@ -1,0 +1,43 @@
+{
+  "name": "claiborne",
+  "version": "1.0.0",
+  "engines": {
+    "node": "12.x"
+  },
+  "description": "1. create heroku and git repos with remotes",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "dev": "concurrently \"nodemon index.js\" \"npm run react\"",
+    "react": "npm start --prefix client"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jdeboi/claiborne.git"
+  },
+  "keywords": [],
+  "author": "jdeboi",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jdeboi/claiborne/issues"
+  },
+  "homepage": "https://github.com/jdeboi/claiborne#readme",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "concurrently": "^5.3.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "http": "0.0.1-security",
+    "http-proxy-middleware": "^1.1.0",
+    "https": "^1.0.0",
+    "mongodb": "^3.6.5",
+    "needle": "^2.6.0",
+    "request": "^2.88.2",
+    "socket.io": "^2.4.1",
+    "socket.io-client": "^2.4.0",
+    "util": "^0.12.3"
+  }
+}
